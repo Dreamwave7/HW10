@@ -27,12 +27,14 @@ class Record:
     
     def remove_phone(self, phone: Phone):
         for p in self.phones:
-            if p.value == phone.value:
+            if p == phone.value:
                 self.phones.remove(p)
     
     def change_phone(self, old_phone: Phone, new_phone: Phone):
-        self.phones.remove(old_phone)
-        self.phones.append(new_phone)
+        for phone in self.phones:
+            if old_phone.value == phone.value:
+                self.phones.remove(phone)
+                self.phones.append(new_phone)
         
         
 class AdressBook(UserDict):
@@ -42,8 +44,3 @@ class AdressBook(UserDict):
     def add_record(self, rec : Record):
         self.data[rec.name.value] = rec
         
-
-
-
-        
-    
