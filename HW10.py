@@ -3,6 +3,9 @@ from string import digits
 
 
 print("hello")
+print("test commit github")
+
+test_commit = "github bla bla bla"
 
 class Field:
     def __init__(self, value):
