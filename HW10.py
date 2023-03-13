@@ -2,6 +2,7 @@ from collections import UserDict
 from string import digits
 
 
+print("hello")
 
 class Field:
     def __init__(self, value):
